@@ -1,10 +1,5 @@
 # PI_WEBIO_680
-no 
-u 
-lucas<jacob<eric<patrick>>>>>>>>>>>>>>>>>>>>>>>>>>cancer>>elkan(elkan is weird)
-charlie zhou is good`
-Patrick is good
-control home GPIO through internet
-#Fred/Jacob is cool
+This project allows users to control LED lighs with internet connection.
+Team Members: Jacob, Patrick, 
 #oct,24 charlie add comments here
 #add through website
