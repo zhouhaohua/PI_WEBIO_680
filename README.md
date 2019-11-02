@@ -1,5 +1,7 @@
 # PI_WEBIO_680
-Jacob SUCKS
+no 
+u 
+lucas<jacob<eric<patrick>>>>>>>>>>>>>>>>>>>>>>>>>>cancer>>elkan(elkan is weird)
 charlie zhou is good`
 Patrick is good
 control home GPIO through internet
