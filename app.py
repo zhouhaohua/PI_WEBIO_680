@@ -1,5 +1,6 @@
 # Raspberry Pi 3 GPIO Pins Status And Control Using Flask Web Server and Python
 
+import time
 import RPi.GPIO as GPIO
 from flask import Flask, render_template, request
 app = Flask(__name__)
@@ -8,6 +9,7 @@ GPIO.setwarnings(False)
 ledRed = 13
 ledYellow= 19
 ledGreen= 26
+ledList=[ledRed, ledYellow, ledGreen]
 ledRedSts = 0
 ledYellowSts = 0
 ledGreenSts = 0
@@ -25,6 +27,24 @@ def index():
     templateData = { 'ledRed' : ledRedSts,
     'ledYellow' : ledYellowSts,
     'ledGreen' : ledGreenSts }
+    return render_template('index.html', **templateData)
+@app.route('/selftest')
+def selftest():
+    for led in ledList:
+        GPIO.output(led, GPIO.HIGH)
+        time.sleep(1)
+        GPIO.output(led, GPIO.LOW)
+    GPIO.output(ledList, GPIO.HIGH)
+    time.sleep(1)
+    GPIO.output(ledList, GPIO.LOW)
+    ledRedSts = GPIO.input(ledRed)
+    ledYellowSts = GPIO.input(ledYellow)
+    ledGreenSts = GPIO.input(ledGreen)
+    selftestres = 1
+    templateData = { 'ledRed' : ledRedSts,
+    'ledYellow' : ledYellowSts,
+    'ledGreen' : ledGreenSts,
+    'selftestres': selftestres}
     return render_template('index.html', **templateData)
 @app.route('/<deviceName>/<action>')
 def do(deviceName, action):
