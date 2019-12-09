@@ -2,6 +2,7 @@
 
 import time
 import RPi.GPIO as GPIO
+import time
 from flask import Flask, render_template, request
 app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
@@ -56,6 +57,8 @@ def do(deviceName, action):
         actuator = ledGreen
     if action == "on":
         GPIO.output(actuator, GPIO.HIGH)
+        time.sleep(1)
+        GPIO.output(actuator, GPIO.LOW)
     if action == "off":
         GPIO.output(actuator, GPIO.LOW)
     ledRedSts = GPIO.input(ledRed)
