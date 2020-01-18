@@ -9,23 +9,17 @@
 </head>
 <body>
 
-<h1 class="redtext">This heading will be red</h1>
-<p>This paragraph will be normal.</p>
-<p class="redtext">This paragraph will be red</p>
-
+<h1 class="redtext">LAB680 Signature Webio Lab demo</h1>
+<p>by Fred,Patrick,Eric,Jacob,Lucas,Elkan Dec,18,2019</p>
 </body>
 </html>
-<title> GPIO Control Web App</title>
+<title> WEBIO Control Web App</title>
 <link rel="styleSheet" href="/static/style.css"/>
 </head>
 <body>
-<img src="/static/dogme.jpg" width="300px" height="300px" alt="Because You Normie"/>
-<h1>Actuators</h1><br>
-<h2>Status</h2>
-<h3> RED LED --> {{ledRed}}</h3>
-<h3> YELLOW LED --> {{ledYellow}}</h3>
-<h3> GREEN LED --> {{ledGreen}}</h3>
-<br>
+<img src="/static/lab680_0.png" width="400px" height="150px" alt="Lab680 Symbol"/>
+<h2>System Diagram</h2>
+<img src="/static/webio_c1.png" width="600px" height="300px" alt="WebIO Camera Symbol"/>
 <h2>Led Control</h2>
 <h3> RED LED CNTRL ==> 
 <a href ="/ledRed/on" class="button">TURN ON</a> 
@@ -39,6 +33,11 @@
 <a href="/ledGreen/on" class="button">TURN ON</a> 
 <a href="/ledGreen/off" class="button">TURN OFF</a>
 </h3>
+<h2>Status</h2>
+<h3> RED LED --> {{ledRed}}</h3>
+<h3> YELLOW LED --> {{ledYellow}}</h3>
+<h3> GREEN LED --> {{ledGreen}}</h3>
+<br>
 <h3> SELF TEST ==> 
 <a href="/selftest" class="button">RUN</a> 
 </h3>
